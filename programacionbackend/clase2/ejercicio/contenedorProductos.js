@@ -130,9 +130,9 @@ const getById = async()=>{
 
 }
 
-//crearProducto();
+crearProducto();
 //deleteById(1);
 //getAll();
 //deleteAll()
-getById(2)
+//getById(2)
 
