@@ -105,16 +105,34 @@ const producto2 = {
 
 
 const crearProducto = async()=>{
-    await listaProductos.save(producto1);
-    await listaProductos.save(producto2);
-
-    const resultadoId = await listaProductos.getById(1);
-    console.log(resultadoId)
-    const productos = await listaProductos.getAll();
-    console.log(productos)
-    await listaProductos.deleteById(2);
-    await listaProductos.save(producto2);
-    // await listaProductos.deleteAll();
+   await listaProductos.save(producto2);
+   
 }
 
-crearProducto();
+const deleteById = async(id)=>{
+
+    await listaProductos.deleteById(id);
+}
+
+const getAll = async()=>{
+    const camisetas = await listaProductos.getAll();
+    console.log(camisetas)
+
+}
+const deleteAll = async()=>{
+    await listaProductos.deleteAll()
+
+}
+const getById = async()=>{
+    const camiseta = await listaProductos.getById();
+     console.log(camiseta)
+    
+
+}
+
+//crearProducto();
+//deleteById(1);
+//getAll();
+//deleteAll()
+getById(2)
+
